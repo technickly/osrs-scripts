@@ -1,0 +1,3 @@
+800x600
+camera 300 zoom
+
