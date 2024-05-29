@@ -7,7 +7,7 @@ import time
 import sys
 
 invs = int(sys.argv[1])
-
+num__ = 14
 #ZOOM 900, 800x600 N UP
 
 
@@ -27,7 +27,7 @@ RR = [  _00,_01,_02,_03,
         _50,_51,_52,_53,
         _60,_61,_62,_63 ]
 
-move_to_sand = [ 1537 , 278 ]
+move_to_sand = [ 1533 , 279 ]
 s_1 = [ 1298 , 345 ]
 s_2 = [ 1320 , 370 ]
 deposit = [ 986 , 485 ]
@@ -36,30 +36,17 @@ def mine():
     if random.randint(0,8) == 70:
         print('pause')
         time.sleep(3 + random.random())
-    #
-    # pg.moveTo(iron_spot_2[0]+random.randint(-2,2),iron_spot_2[1]+random.randint(-5,5),.2+random.random()/2,pg.easeInQuad)
-    # pg.click()
-    # time.sleep(1.8+random.random()/10)
-    # pg.moveTo(iron_spot_3[0]+random.randint(-2,2),iron_spot_3[1]+random.randint(-5,5),.2+random.random()/2,pg.easeInQuad)
-    # pg.click()
-    # time.sleep(1.8+random.random()/10)
-    # pg.moveTo(iron_spot_1[0]+random.randint(-2,2),iron_spot_1[1]+random.randint(-5,5),.2+random.random()/2,pg.easeInQuad)
-    # pg.click()
-    # time.sleep(1.8+random.random()/10)
-    # time.sleep(2+random.random())
-    # else:
-        # print('left->middle->right')
-    pg.moveTo(move_to_sand[0]+random.randint(-2,2),move_to_sand[1]+random.randint(-5,5),.2+random.random()/2,pg.easeInQuad)
+    pg.moveTo(move_to_sand[0]+random.randint(0,1),move_to_sand[1]+random.randint(-1,1),.2+random.random()/2,pg.easeInQuad)
     pg.click()
     time.sleep(5+random.random()/10)
 
-    for j in range(10):
+    for j in range(num__):
         pg.moveTo(s_1[0]+random.randint(-2,2),s_1[1]+random.randint(-2,2),.2+random.random()/2,pg.easeInQuad)
         pg.click()
-        time.sleep(3.6+random.random()/10)
+        time.sleep(3.2+random.random()/10)
         pg.moveTo(s_2[0]+random.randint(-2,2),s_2[1]+random.randint(-2,2),.2+random.random()/2,pg.easeInQuad)
         pg.click()
-        time.sleep(3.6+random.random()/10)
+        time.sleep(3.2+random.random()/10)
     pg.moveTo(deposit[0]+random.randint(-2,2),deposit[1]+random.randint(-5,5),.2+random.random()/2,pg.easeInQuad)
     pg.click()
     time.sleep(5+random.random()/10)
