@@ -33,7 +33,7 @@ iron_spot_2 = [ 1293 , 244 ]
 iron_spot_3 = [ 1415 , 373 ]
 
 def mine():
-    if random.randint(0,12) == 15:
+    if random.randint(0,12) == 7:
         print('middle->right->left')
         time.sleep(3 + random.random())
         pg.moveTo(iron_spot_2[0]+random.randint(-2,2),iron_spot_2[1]+random.randint(-5,5),.2+random.random()/2,pg.easeInQuad)
