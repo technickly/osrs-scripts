@@ -28,30 +28,30 @@ RR = [  _00,_01,_02,_03,
         _60,_61,_62,_63 ]
 
 
-w1 = [ 1236 , 551 ]
-w2 = [ 1108 , 308 ]
+w1 = [ 1164 , 293 ]
+w2 = [ 1352 , 231 ]
 knife = RR[0]
 log = RR[1]
 # run_tree = [ 1378 , 136 ]
 def cut():
-    if random.randint(0,10) == 3:
+    if random.randint(0,10) == 5:
         print('pause')
         time.sleep(5 + random.random())
-        for j in range(2):
-            pg.moveTo(w2[0]+random.randint(-2,2),w2[1]+random.randint(-2,2),.2+random.random()/2,pg.easeInQuad)
-            pg.click()
-            time.sleep(26.+(random.random()*3.5))
-            pg.moveTo(w1[0]+random.randint(-2,2),w1[1]+random.randint(-2,2),.2+random.random()/2,pg.easeInQuad)
-            pg.click()
-            time.sleep(26.+(random.random()*3.5))
+        # for j in range(2):
+        #     pg.moveTo(w2[0]+random.randint(-2,2),w2[1]+random.randint(-2,2),.2+random.random()/2,pg.easeInQuad)
+        #     pg.click()
+        #     time.sleep(26.+(random.random()*3.5))
+        #     pg.moveTo(w1[0]+random.randint(-2,2),w1[1]+random.randint(-2,2),.2+random.random()/2,pg.easeInQuad)
+        #     pg.click()
+        #     time.sleep(26.+(random.random()*3.5))
     else:
-        for j in range(2):
+        for j in range(4):
             pg.moveTo(w1[0]+random.randint(-2,2),w1[1]+random.randint(-2,2),.2+random.random()/2,pg.easeInQuad)
             pg.click()
-            time.sleep(26.+(random.random()*3.5))
+            time.sleep(12.+(random.random()*3.5))
             pg.moveTo(w2[0]+random.randint(-2,2),w2[1]+random.randint(-2,2),.2+random.random()/2,pg.easeInQuad)
             pg.click()
-            time.sleep(26.+(random.random()*3.5))
+            time.sleep(12.+(random.random()*3.5))
 
 def fletch():
     pg.moveTo(knife[0]+random.randint(-2,2),knife[1]+random.randint(-2,2),.2+random.random()/2,pg.easeInQuad)
