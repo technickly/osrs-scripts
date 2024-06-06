@@ -10,6 +10,8 @@ invs = int(sys.argv[1])
 
 #ZOOM 40, 800x600 N UP
 
+click_bank = [ 1332 , 541 ]
+furnace = [ 1272 , 206 ]
 
 _00 = 1530, 350; _01 = 1575, 350; _02 = 1620, 350; _03 = 1660, 350
 _10 = 1530, 390; _11 = 1575, 390; _12 = 1620, 390; _13 = 1660, 390
@@ -28,11 +30,11 @@ RR = [  _00,_01,_02,_03,
         _60,_61,_62,_63 ]
 
 # move_to_sand = [ 1537 , 278 ]
-click_bank = [ 1328 , 542 ]
-deposit_gold = [ 1569 , 350 ]
-bank_1 = [ 1016 , 160 ]
-bank_2 = [ 1065 , 159 ]
-furnace = [ 1271 , 208 ]
+
+
+deposit_gold = RR[1]
+bank_1 = [ 1018 , 162 ]
+# bank_2 = [ 1065 , 159 ]
 run = True
 if run == True:
     sleeper = 7
@@ -48,11 +50,11 @@ def smith():
     if random.randint(0,8) == 70:
         print('pause')
         time.sleep(3 + random.random())
-    pg.moveTo(click_bank[0]+random.randint(-2,2),click_bank[1]+random.randint(-5,5),.2+random.random()/2,pg.easeInQuad)
+    pg.moveTo(click_bank[0]+random.randint(-1,1),click_bank[1]+random.randint(-1,1),.2+random.random()/2,pg.easeInQuad)
     pg.click()
     time.sleep(sleeper+random.random()/10)
 
-    pg.moveTo(deposit_gold[0]+random.randint(-2,2),deposit_gold[1]+random.randint(-5,5),.2+random.random()/2,pg.easeInQuad)
+    pg.moveTo(deposit_gold[0]+random.randint(-1,1),deposit_gold[1]+random.randint(-1,1),.2+random.random()/2,pg.easeInQuad)
     pg.click()
     time.sleep(1.2+random.random()/10)
 
