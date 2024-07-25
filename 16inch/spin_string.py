@@ -8,7 +8,7 @@ import sys
 
 invs = int(int(sys.argv[1])/27)
 time.sleep(1)
-click_bank = [ 1289 , 278 ]
+click_bank = pg.position()
 # click_bank = [ 1287 , 445 ]
 
 #ZOOM 900, 800x600 N UP
@@ -32,10 +32,10 @@ RR = [  _00,_01,_02,_03,
 
 # move_to_sand = [ 1537 , 278 ]
 # click_bank = [ 1287 , 445 ]
-deposit_string = [ 1607 , 351 ]
+deposit_string = [ 1614 , 349 ]
 bank_1 = [ 1016 , 160 ]
 cast_spell = [ 1526 , 445 ] # everything off
-
+# bank_1 = pg.position
 # bank_2 = [ 1065 , 159 ]
 # furnace = [ 941 , 421 ]
 # s_1 = [ 1298 , 345 ]
