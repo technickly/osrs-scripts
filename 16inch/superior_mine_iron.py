@@ -33,7 +33,7 @@ iron_spot_2 = [ 1293 , 244 ]
 iron_spot_3 = [ 1415 , 373 ]
 
 def mine():
-    if random.randint(0,12) == 5:
+    if random.randint(0,12) == 50:
         print('pause')
         time.sleep(3 + random.random())
         # pg.moveTo(iron_spot_2[0]+random.randint(-2,2),iron_spot_2[1]+random.randint(-5,5),.2+random.random()/2,pg.easeInQuad)
@@ -69,6 +69,10 @@ def mine():
         pg.moveTo(iron_spot_1[0]+random.randint(-2,2),iron_spot_1[1]+random.randint(-5,5),.2+random.random()/2,pg.easeInQuad)
         pg.click()
         time.sleep(5+random.random()/10)
+        pg.moveTo(iron_spot_1[0]+random.randint(-2,2),iron_spot_1[1]+random.randint(-5,5),.2+random.random()/2,pg.easeInQuad)
+        pg.click()
+        time.sleep(7.2+random.random()/10)
+
         # pg.moveTo(iron_spot_2[0]+random.randint(-2,2),iron_spot_2[1]+random.randint(-5,5),.2+random.random()/2,pg.easeInQuad)
         # pg.click()
         # time.sleep(7.2+random.random()/10)

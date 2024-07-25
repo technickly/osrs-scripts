@@ -73,7 +73,7 @@ def blow():
     time.sleep(.8+random.random()/10)
 
     pg.press('space')
-    time.sleep(49+random.random()/10)
+    time.sleep(31+random.random()/10)
     #
     # for j in range(10):
     #     pg.moveTo(s_1[0]+random.randint(-2,2),s_1[1]+random.randint(-2,2),.2+random.random()/2,pg.easeInQuad)

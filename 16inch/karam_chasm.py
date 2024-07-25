@@ -20,15 +20,15 @@ RR = [  _12,_13,
         _30,_31,_32,_33 ]
 
 
-karam_fish = [ 1286 , 280 ]
-karam_to_ring = [ 1309 , 462 ]
+karam_fish = [ 1285 , 328 ]
+karam_to_ring = [ 1298 , 411 ]
 chasm_tele_click = [ 1594 , 389 ]
 confirm = [ 1189 , 395 ]
 
-ring_to_bank = [ 1609 , 512 ]
+ring_to_bank = [ 1424 , 428 ]
 # fish_barrel = [ 1604 , 294 ]
 
-bank_to_ring = [ 917 , 205 ]
+bank_to_ring = [ 1125 , 298 ]
 
 
 fish_tele_click = [ 1577 , 435 ]

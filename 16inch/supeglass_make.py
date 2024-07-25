@@ -28,7 +28,7 @@ RR = [  _00,_01,_02,_03,
         _60,_61,_62,_63 ]
 
 
-spell = [ 1596 , 451 ]
+spell = [ 1527 , 446 ]
 seaweeed = [ 1020 , 160 ]
 sand = [ 1066 , 162 ]
 
@@ -42,7 +42,7 @@ def cast():
     pg.moveTo(deposit[0]+random.randint(-2,2),deposit[1]+random.randint(-2,2),.2+random.random()/2,pg.easeInQuad)
     pg.click()
     time.sleep(.8+random.random()/2)
-    print('k')
+    # print('k')
     pg.moveTo(seaweeed[0]+random.randint(-2,2),seaweeed[1]+random.randint(-2,2),.2+random.random()/2,pg.easeInQuad)
     pg.click()
     time.sleep(random.random()/10)
@@ -72,9 +72,9 @@ def pickup():
     time.sleep(.8+(random.random()/2))
     pg.press('esc')
     pg.moveTo(me[0]+random.randint(-2,2),me[1]+random.randint(-2,2),.2+random.random()/2,pg.easeInQuad)
-    for k in range(27):
+    for k in range(20):
         pg.click()
-        time.sleep(.2+random.random()/10)
+        time.sleep(.3+random.random()/2)
 
 
 

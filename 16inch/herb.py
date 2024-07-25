@@ -11,9 +11,9 @@ import math
 
 # type_ = 'fin'
 # num_herbs = 700
-num_herbs = int(sys.argv[1])
+num_herbs = int(sys.argv[2])
 # type_ = 'unf'
-type_ = str(sys.argv[2])
+type_ = str(sys.argv[1])
 
 _00 = 1530, 350; _01 = 1575, 350; _02 = 1620, 350; _03 = 1660, 350
 _10 = 1530, 390; _11 = 1575, 390; _12 = 1620, 390; _13 = 1660, 390

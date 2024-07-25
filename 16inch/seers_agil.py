@@ -9,22 +9,23 @@ t1 = time.time()
 
 def run_laps(laps_):
     # laps_ = 9
-    wall_1 = [ 1327 , 270 ]
-    gap_1 = [ 1257 , 327 ]
-    rope_1 = [ 1295 , 373 ]
-    gap_2 = [ 1324 , 367 ]
+    wall_1 = [ 1308 , 309 ]
+    gap_1 = [ 1251 , 355 ]
+    rope_1 = [ 1281 , 393 ]
+    gap_2 = [ 1303 , 388 ]
     # [ 1320 , 365 ]
-    gap_3 = [ 1260 , 360 ]
+    gap_3 = [ 1251 , 382 ]
     # [ 1253 , 360 ]
-    edge_final = [ 1321 , 355 ]
-    run_to_tile = [ 1456 , 255 ]
-    noise = 1
+    edge_final = [ 1304 , 377 ]
+    run_to_tile = [ 1415 , 296 ]
+    noise = 0
     move_noise = .1
 
 
     for i in tqdm(range(laps_)):
         run_loop = time.time()
         noise = random.randint(-1,1)
+        noise = 0
         move_noise = random.randint(1,2)/10
 
     #FROM TILE MARKER TO WALL
@@ -73,6 +74,7 @@ def run_laps(laps_):
         print('Run Loop: ',((time.time()-run_loop)))
 
 def pickup_marks():
+        print('marks')
         # laps_ = 9
         wall_1 = [ 1327 , 270 ]
         m0 = [ 1302 , 328 ]
@@ -83,8 +85,8 @@ def pickup_marks():
         m3 = [ 1327 , 335 ]
         gap_2 = [ 1311 , 373 ]
         gap_3 = [ 1245 , 360 ]
-        m4 = [ 1291 , 342 ]
-        edge_final = [ 1346 , 355 ]
+        m4 = [ 1277 , 365 ]
+        edge_final = [ 1324 , 378 ]
         run_to_tile = [ 1456 , 255 ]
         noise = 1
         move_noise = .1
