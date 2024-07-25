@@ -28,12 +28,12 @@ RR = [  _00,_01,_02,_03,
         _60,_61,_62,_63 ]
 
 
-iron_spot_1 = [ 1180 , 369 ]
-iron_spot_2 = [ 1293 , 244 ]
-iron_spot_3 = [ 1415 , 373 ]
+iron_spot_1 = [ 921 , 342 ]
+iron_spot_2 = [ 1020 , 233 ]
+iron_spot_3 = [ 1139 , 340 ]
 
 def mine():
-    if random.randint(0,12) == 7:
+    if random.randint(0,100) == 7:
         print('middle->right->left')
         time.sleep(3 + random.random())
         pg.moveTo(iron_spot_2[0]+random.randint(-2,2),iron_spot_2[1]+random.randint(-5,5),.2+random.random()/2,pg.easeInQuad)
@@ -50,14 +50,34 @@ def mine():
         # print('left->middle->right')
         pg.moveTo(iron_spot_1[0]+random.randint(-2,2),iron_spot_1[1]+random.randint(-5,5),.2+random.random()/2,pg.easeInQuad)
         pg.click()
-        time.sleep(1.8+random.random()/10)
+        time.sleep(7.2+random.random()/10)
         pg.moveTo(iron_spot_2[0]+random.randint(-2,2),iron_spot_2[1]+random.randint(-5,5),.2+random.random()/2,pg.easeInQuad)
         pg.click()
-        time.sleep(1.8+random.random()/10)
-        pg.moveTo(iron_spot_3[0]+random.randint(-2,2),iron_spot_3[1]+random.randint(-5,5),.2+random.random()/2,pg.easeInQuad)
+        time.sleep(7.2+random.random()/10)
+        pg.moveTo(iron_spot_1[0]+random.randint(-2,2),iron_spot_1[1]+random.randint(-5,5),.2+random.random()/2,pg.easeInQuad)
         pg.click()
-        time.sleep(1.8+random.random()/10)
+        time.sleep(7.2+random.random()/10)
+        pg.moveTo(iron_spot_2[0]+random.randint(-2,2),iron_spot_2[1]+random.randint(-5,5),.2+random.random()/2,pg.easeInQuad)
+        pg.click()
+        time.sleep(7.2+random.random()/10)
+        pg.moveTo(iron_spot_1[0]+random.randint(-2,2),iron_spot_1[1]+random.randint(-5,5),.2+random.random()/2,pg.easeInQuad)
+        pg.click()
+        time.sleep(7.2+random.random()/10)
+        pg.moveTo(iron_spot_2[0]+random.randint(-2,2),iron_spot_2[1]+random.randint(-5,5),.2+random.random()/2,pg.easeInQuad)
+        pg.click()
+        time.sleep(7.2+random.random()/10)
+        pg.moveTo(iron_spot_1[0]+random.randint(-2,2),iron_spot_1[1]+random.randint(-5,5),.2+random.random()/2,pg.easeInQuad)
+        pg.click()
+        time.sleep(7.2+random.random()/10)
+        pg.moveTo(iron_spot_2[0]+random.randint(-2,2),iron_spot_2[1]+random.randint(-5,5),.2+random.random()/2,pg.easeInQuad)
+        pg.click()
+        time.sleep(5+random.random()/10)
 
+
+        # pg.moveTo(iron_spot_3[0]+random.randint(-2,2),iron_spot_3[1]+random.randint(-5,5),.2+random.random()/2,pg.easeInQuad)
+        # pg.click()
+        # time.sleep(1.8+random.random()/10)
+        #
 
 
 def move_through_inv(RR,shuffle,reverse,click):
@@ -78,18 +98,20 @@ def move_through_inv(RR,shuffle,reverse,click):
         pg.moveTo(pos[0]+random.randint(-2,2),pos[1]+random.randint(-2,2),tween_delay,pg.easeInQuad)
         if click == True:
             pg.click()
+            print('o')
         time.sleep(move_delay)
 
 for i in tqdm(range(invs)):
     t1 = time.time()
-    for k in range(9):
-        mine()
+    # for k in range(1):
+    mine()
     if i % 3 == 0:
         move_through_inv(RR[1:],shuffle=True,reverse=True,click=True)
     else:
         chance = random.randint(0,1)
+        chance = 0
         if chance == 0:
             move_through_inv(RR[1:],shuffle=False,reverse=False,click=True)
-        else:
-            move_through_inv(RR[1:],shuffle=False,reverse=True,click=True)
+        # else:
+        #     move_through_inv(RR[1:],shuffle=False,reverse=True,click=True)
     print(i,time.time()-t1, pg.position())

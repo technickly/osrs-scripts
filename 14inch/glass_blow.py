@@ -32,7 +32,8 @@ RR = [  _00,_01,_02,_03,
 
 # move_to_sand = [ 1537 , 278 ]
 # click_bank = [ 1287 , 445 ]
-deposit_glass_item = [ 1569 , 353 ]
+#deposit_glass_item = [ 1569 , 353 ]
+deposit_glass_item = RR[1]
 # bank_1 = [ 1016 , 160 ]
 bank_1 = [ 747 , 149 ]
 
