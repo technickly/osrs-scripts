@@ -110,7 +110,7 @@ def blow():
 
 for i in tqdm(range(invs)):
     t1 = time.time()
-    for k in range(9):
+    for k in range(invs):
         blow()
     # if i % 3 == 0:
     #     move_through_inv(RR[1:],shuffle=True,reverse=True,click=True)

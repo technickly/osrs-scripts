@@ -5,7 +5,7 @@ import pyautogui as pg
 import random
 import time
 import sys
-
+import os
 invs = int(sys.argv[1])
 
 #ZOOM 900, 800x600 E UP
@@ -31,10 +31,15 @@ RR = [  _00,_01,_02,_03,
 spell = [ 1527 , 446 ]
 seaweeed = [ 1020 , 160 ]
 sand = [ 1066 , 162 ]
+me = [ 1291 , 369 ]
 
 # flax =[ 1015 , 157 ]
-deposit = RR[2]
+deposit = RR[4]
 bank = pg.position()
+time.sleep(2)
+os.system('say move to me')
+time.sleep(2)
+me = pg.position()
 def cast():
     pg.moveTo(bank[0]+random.randint(-2,2),bank[1]+random.randint(-2,2),.2+random.random()/2,pg.easeInQuad)
     pg.click()
@@ -62,7 +67,6 @@ def cast():
 
 
 def pickup():
-    me = [ 1295 , 367 ]
     pg.moveTo(bank[0]+random.randint(-2,2),bank[1]+random.randint(-2,2),.2+random.random()/2,pg.easeInQuad)
     pg.click()
     time.sleep(.9+(random.random()/10))

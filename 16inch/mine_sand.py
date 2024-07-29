@@ -7,7 +7,7 @@ import time
 import sys
 
 invs = int(sys.argv[1])
-num__ = 12
+num__ = 14
 #ZOOM 900, 800x600 N UP
 
 
@@ -27,10 +27,10 @@ RR = [  _00,_01,_02,_03,
         _50,_51,_52,_53,
         _60,_61,_62,_63 ]
 
-move_to_sand =[ 1412 , 607 ]
-s_1 = [ 1321 , 364 ]
-s_2 = [ 1295 , 389 ]
-deposit = [ 1185 , 75 ]
+move_to_sand =[ 1494 , 280 ]
+s_1 = [ 1317 , 369 ]
+s_2 = [ 1296 , 350 ]
+deposit = [ 1040 , 465 ]
 
 def mine():
     if random.randint(0,8) == 70:
@@ -43,10 +43,10 @@ def mine():
     for j in range(num__):
         pg.moveTo(s_1[0]+random.randint(-1,1),s_1[1]+random.randint(-1,1),.2+random.random()/2,pg.easeInQuad)
         pg.click()
-        time.sleep(3.2+random.random()/10)
+        time.sleep(4.5+random.random()/10)
         pg.moveTo(s_2[0]+random.randint(-1,1),s_2[1]+random.randint(-1,1),.2+random.random()/2,pg.easeInQuad)
         pg.click()
-        time.sleep(3.2+random.random()/10)
+        time.sleep(4.5+random.random()/10)
     pg.moveTo(deposit[0]+random.randint(-1,1),deposit[1]+random.randint(-1,1),.2+random.random()/2,pg.easeInQuad)
     pg.click()
     time.sleep(5+random.random()/10)
