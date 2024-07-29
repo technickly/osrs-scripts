@@ -10,8 +10,8 @@ invs = int(sys.argv[1])
 
 #ZOOM 40, 800x600 N UP
 
-click_bank = [ 1332 , 541 ]
-furnace = [ 1272 , 206 ]
+click_bank = [ 1227 , 255 ]
+furnace = [ 1139 , 504 ]
 
 _00 = 1530, 350; _01 = 1575, 350; _02 = 1620, 350; _03 = 1660, 350
 _10 = 1530, 390; _11 = 1575, 390; _12 = 1620, 390; _13 = 1660, 390
@@ -33,8 +33,8 @@ RR = [  _00,_01,_02,_03,
 
 
 deposit_gold = RR[1]
-bank_1 = [ 1018 , 162 ]
-# bank_2 = [ 1065 , 159 ]
+bank_1 = [ 1016 , 161 ]
+bank_2 = [ 1064 , 158 ]
 run = True
 if run == True:
     sleeper = 7
@@ -62,9 +62,9 @@ def smith():
     pg.click()
     time.sleep(.65+random.random()/10)
 
-    # pg.moveTo(bank_2[0]+random.randint(-2,2),bank_2[1]+random.randint(-5,5),.2+random.random()/2,pg.easeInQuad)
-    # pg.click()
-    # time.sleep(.65+random.random()/10)
+    pg.moveTo(bank_2[0]+random.randint(-2,2),bank_2[1]+random.randint(-5,5),.2+random.random()/2,pg.easeInQuad)
+    pg.click()
+    time.sleep(.65+random.random()/10)
     #
     pg.press('esc')
 
@@ -75,7 +75,7 @@ def smith():
     pg.press('space')
     # pg.press('space')
     #if gold
-    time.sleep(50.5+random.random()/10)
+    time.sleep(25.5+random.random()/10)
 
     # time.sleep(16.5+random.random()/10)
     #
