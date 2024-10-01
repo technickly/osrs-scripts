@@ -13,6 +13,9 @@ x,y = pg.position()
 # x,y = [ 1657 , 885 ]
 for i in range(num_):
     noise = random.randint(-1,1)
-    pg.moveTo(x+noise , y+noise)
+    flip = random.randint(0,10)
+    if flip == 2:
+        pg.moveTo(x+noise , y+noise)
+
     time.sleep(1.4 + random.random()/5)
     pg.click()

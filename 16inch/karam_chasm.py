@@ -4,7 +4,7 @@ import os
 import sys
 
 num_invs = int(sys.argv[1])
-#CAMERA 40
+#CAMERA 0
 #RUNELITE N ZOOMED OUT 765X550
 #START AT DKP RING
 _00 = 1530, 350; _01 = 1575, 350; _02 = 1620, 350; _03 = 1660, 350
@@ -20,16 +20,15 @@ RR = [  _12,_13,
         _30,_31,_32,_33 ]
 
 
-karam_fish = [ 1285 , 328 ]
-karam_to_ring = [ 1298 , 411 ]
+karam_fish = [ 1291 , 312 ]
+karam_to_ring = [ 1306 , 423 ]
+
+ring_to_bank = [ 1502 , 448 ]
+# fish_barrel = [ 1604 , 294 ]
+bank_to_ring = [ 1047 , 269 ]
+
 chasm_tele_click = [ 1594 , 389 ]
 confirm = [ 1189 , 395 ]
-
-ring_to_bank = [ 1424 , 428 ]
-# fish_barrel = [ 1604 , 294 ]
-
-bank_to_ring = [ 1125 , 298 ]
-
 
 fish_tele_click = [ 1577 , 435 ]
 
@@ -39,7 +38,7 @@ import pyautogui
 
 #
 for i in range(num_invs):
-    karam_inv =  RR[random.randint(0,len(RR)-1)]
+    karam_inv =  RR[random.randint(5,len(RR)-1)]
 
     print(i)
     #From Fairy Ring on Karajama
